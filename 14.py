@@ -46,7 +46,10 @@ while True:
     else:
         print(linguae[5]); continue
 while True:
-    coniectura = (primus_terminus + secundus_terminus + 1) // 2
+    if primus_terminus + secundus_terminus > 0:
+        coniectura = (primus_terminus + secundus_terminus + 1) // 2
+    else:
+        coniectura = (primus_terminus + secundus_terminus) // 2
     print(f'{linguae[6]} {coniectura}?')
     respondere = input(
         f'+ ({linguae[7]} {coniectura})\n'
