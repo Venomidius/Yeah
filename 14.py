@@ -46,7 +46,7 @@ while True:
     else:
         print(linguae[5]); continue
 while True:
-    if primus_terminus + secundus_terminus > 0:
+    if secundus_terminus == numerus:
         coniectura = (primus_terminus + secundus_terminus + 1) // 2
     else:
         coniectura = (primus_terminus + secundus_terminus) // 2
