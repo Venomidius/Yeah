@@ -4,19 +4,19 @@ for persona in osoby:
     nomen = persona['imie']; cognomen = persona['nazwisko']
     altitudo = persona['wzrost']
     if altitudo > 1.8:
-        print(nomen + ' ' + cognomen)
+        print(f'{nomen} {cognomen}')
 print('\n2. Wszystkie osoby urodzone przed 1960 rokiem:')
 for persona in osoby:
     nomen = persona['imie']; cognomen = persona['nazwisko']
     annus_natalis = persona['rok_urodzenia']
     if annus_natalis < 1960:
-        print(nomen + ' ' + cognomen)
+        print(f'{nomen} {cognomen}')
 print('\n3. Wszystkie osoby o wadze poniżej 80:')
 for persona in osoby:
     nomen = persona['imie']; cognomen = persona['nazwisko']
     pondus = persona['waga']
     if pondus < 80:
-        print(nomen + ' ' + cognomen)
+        print(f'{nomen} {cognomen}')
 print('\n4. Liczba osób z imieniem Jakub:')
 numerare = 0
 for persona in osoby:
@@ -28,8 +28,9 @@ print('\n5. Wszystkie osoby wraz z ich BMI:')
 for persona in osoby:
     nomen = persona['imie']; cognomen = persona['nazwisko']
     pondus = persona['waga']; altitudo = persona['wzrost']
+    nomen_et_cognomen = f'{nomen} {cognomen}'
     BMI = pondus / altitudo ** 2
-    print(nomen + ' ' + cognomen + '   BMI: ' + str(BMI))
+    print(f'{nomen_et_cognomen:^30} | {BMI:.2f}')
 print('\n6. Największe i najmniejsze BMI:')
 max_BMI = 0
 min_BMI = 1000000000
@@ -40,5 +41,5 @@ for persona in osoby:
         max_BMI = BMI
     if BMI < min_BMI:
         min_BMI = BMI
-print(f'Największe BMI: {max_BMI}')
-print(f'Najmniejsze BMI: {min_BMI}')
+print(f'Największe BMI: {max_BMI:.2f}')
+print(f'Najmniejsze BMI: {min_BMI:.2f}')
